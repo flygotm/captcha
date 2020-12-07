@@ -1,5 +1,5 @@
-github.com/billcoding/flygo v0.0.0-20201204135124-840d15c7140a h1:oZvctVal8uLp1ln6nIXYmzVogkAmMzzQaMj99eIJito=
-github.com/billcoding/flygo v0.0.0-20201204135124-840d15c7140a/go.mod h1:1dLqHLPQNPgxZgtWObQOw/BV1fc7AyyUn4uYQ+Fekqc=
+github.com/billcoding/flygo v0.0.0-20201207110843-363463457f1b h1:xcNwauObhNGLW8PWUV/ytUUm1e36fGOXSfBJm+N0nWU=
+github.com/billcoding/flygo v0.0.0-20201207110843-363463457f1b/go.mod h1:1dLqHLPQNPgxZgtWObQOw/BV1fc7AyyUn4uYQ+Fekqc=
 github.com/fogleman/gg v1.3.0 h1:/7zJX8F6AaYQc57WQCyN9cAIz+4bCJGO9B+dyW29am8=
 github.com/fogleman/gg v1.3.0/go.mod h1:R/bRT+9gY/C5z7JzPU0zXsXHKM4/ayA+zqcVNZzPa1k=
 github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 h1:DACJavvAHhabrF08vX0COfcOBJRhZ8lUbR+ZWIs0Y5g=
