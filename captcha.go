@@ -1,75 +1,96 @@
 package captcha
 
 import (
-	"fmt"
-	"github.com/billcoding/flygo"
+	"github.com/billcoding/calls"
+	c "github.com/billcoding/flygo/context"
+	"github.com/billcoding/flygo/log"
+	"github.com/billcoding/flygo/middleware"
 )
 
 //Define captcha struct
 type captcha struct {
+	logger     log.Logger
 	sessionKey string
 	width      int
 	height     int
 	length     int
-	Generator  Generator
+	generator  Generator
 }
 
+//New
 func New() *captcha {
 	return &captcha{
-		sessionKey: "FlygoCaptcha",
+		logger:     log.New("[Captcha]"),
+		sessionKey: "Captcha",
 		width:      200,
 		height:     80,
 		length:     4,
-		Generator:  &defaultGenerator{},
+		generator:  &defaultGenerator{},
 	}
 }
 
+//Name
+func (cc *captcha) Name() string {
+	return "Captcha"
+}
+
+//Type
+func (cc *captcha) Type() *middleware.Type {
+	return middleware.TypeHandler
+}
+
+//Method
+func (cc *captcha) Method() middleware.Method {
+	return middleware.MethodGet
+}
+
+//Pattern
+func (cc *captcha) Pattern() middleware.Pattern {
+	return "/captcha/rand"
+}
+
+//Handler
+func (cc *captcha) Handler() func(c *c.Context) {
+	return func(c *c.Context) {
+		rands := cc.generator.generate(cc.length)
+		bytes := imgText(cc.width, cc.height, rands)
+		c.PNG(bytes)
+		session := middleware.GetSession(c)
+		calls.NNil(session, func() {
+			session.Set(cc.sessionKey, rands)
+		})
+		calls.Nil(session, func() {
+			cc.logger.Warn("session is nil")
+		})
+	}
+}
+
+//SessionKey
 func (cc *captcha) SessionKey(sessionKey string) *captcha {
 	cc.sessionKey = sessionKey
 	return cc
 }
 
+//Width
 func (cc *captcha) Width(width int) *captcha {
 	cc.width = width
 	return cc
 }
 
+//Height
 func (cc *captcha) Height(height int) *captcha {
 	cc.height = height
 	return cc
 }
 
+//Length
 func (cc *captcha) Length(length int) *captcha {
 	cc.length = length
 	return cc
 }
 
-func (cc *captcha) Method() string {
-	return "GET"
-}
-
-func (cc *captcha) Fields() []*flygo.Field {
-	return nil
-}
-
-func (cc *captcha) Name() string {
-	return "FlygoCaptcha"
-}
-
-func (cc *captcha) Pattern() string {
-	return "/captcha/rand"
-}
-
-func (cc *captcha) Process() flygo.Handler {
-	return func(c *flygo.Context) {
-		rands := cc.Generator.generate(cc.length)
-		bytes := imgText(cc.width, cc.height, rands)
-		c.PNG(bytes)
-		session := c.Session
-		if session == nil {
-			fmt.Println("session is nil")
-		} else {
-			session.Set(cc.sessionKey, rands)
-		}
-	}
+//Generator
+func (cc *captcha) Generator(generator Generator) *captcha {
+	cc.generator = generator
+	return cc
 }
