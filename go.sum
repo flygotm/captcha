@@ -2,8 +2,8 @@ github.com/billcoding/binding v0.0.0-20201223024128-036102f2b593 h1:3/ctGW2h4MIV
 github.com/billcoding/binding v0.0.0-20201223024128-036102f2b593/go.mod h1:19LOPkvympTwyQXTphzsnixiXReNs40yJLfqASlAi+M=
 github.com/billcoding/calls v0.0.0-20201221013021-2a8a0fd0a632 h1:wgetY46Oh3Jq6iZ0CXRI52RSw9JPvGr80/SbdbyJMBE=
 github.com/billcoding/calls v0.0.0-20201221013021-2a8a0fd0a632/go.mod h1:6ValEbx4tcCN9gkmvPyOHdCz1Cs8uju/RFkb/Sxbg9o=
-github.com/billcoding/flygo v0.0.0-20201228091623-0311990d6e70 h1:SFNLZq1/iUbo85wprVgQN/pFs+RLxuU0yXAGeiYWPu0=
-github.com/billcoding/flygo v0.0.0-20201228091623-0311990d6e70/go.mod h1:QsWnPrTsiNMCBaN5akLjwNX7c8uuuO0BQBhc6Pa2RjY=
+github.com/billcoding/flygo v0.0.0-20210105092307-8c94e3645d60 h1:JBSWZvhVydpHFKdLAXZAkI1kTA0TLl6wwRj915httXs=
+github.com/billcoding/flygo v0.0.0-20210105092307-8c94e3645d60/go.mod h1:QsWnPrTsiNMCBaN5akLjwNX7c8uuuO0BQBhc6Pa2RjY=
 github.com/billcoding/reflectx v0.0.0-20201222040200-28873e79f434 h1:ZohTV9OTS6MhyD3OYVdWpaTFq6/0E8ukRE+reSGHZR4=
 github.com/billcoding/reflectx v0.0.0-20201222040200-28873e79f434/go.mod h1:Okk8SwEN5BDTmaorb1vLDjYD5G8kKlJ+el0Snd0RQgk=
 github.com/billcoding/validator v0.0.0-20201222055116-f037ee93f4c9 h1:+2E9quWi7LmxZcrOj6lm8Z9kg5DvcuDVOSW+bqjpwnk=
