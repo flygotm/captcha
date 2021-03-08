@@ -7,14 +7,13 @@ import (
 	"github.com/billcoding/flygo/session"
 	"github.com/billcoding/flygo/session/memory"
 	"testing"
-	"time"
 )
 
 func TestNew(t *testing.T) {
 	app := flygo.GetApp()
 	cc := New()
 	app.Use(cc)
-	app.UseSession(memory.Provider(), &session.Config{Timeout: time.Hour * 12}, nil)
+	app.UseSession(memory.Provider(), &session.Config{Timeout: 60 * 12}, nil)
 	app.GET("/get", func(c *c.Context) {
 		c.Text(middleware.GetSession(c).Get(cc.sessionKey).(string))
 	})

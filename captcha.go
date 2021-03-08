@@ -1,7 +1,6 @@
 package captcha
 
 import (
-	"github.com/billcoding/calls"
 	c "github.com/billcoding/flygo/context"
 	"github.com/billcoding/flygo/log"
 	"github.com/billcoding/flygo/middleware"
@@ -56,12 +55,11 @@ func (cc *captcha) Handler() func(c *c.Context) {
 		bytes := imgText(cc.width, cc.height, rands)
 		c.PNG(bytes)
 		session := middleware.GetSession(c)
-		calls.NNil(session, func() {
+		if session != nil {
 			session.Set(cc.sessionKey, rands)
-		})
-		calls.Nil(session, func() {
+		} else {
 			cc.logger.Warn("session is nil")
-		})
+		}
 	}
 }
 

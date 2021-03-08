@@ -1,7 +1,6 @@
 package captcha
 
 import (
-	"github.com/billcoding/calls"
 	c "github.com/billcoding/flygo/context"
 	"github.com/billcoding/flygo/middleware"
 	"strings"
@@ -9,9 +8,9 @@ import (
 
 //return current session captcha code
 func (cc *captcha) Current(c *c.Context) (str string) {
-	calls.NNil(middleware.GetSession(c), func() {
+	if middleware.GetSession(c) != nil {
 		str = middleware.GetSession(c).Get(cc.sessionKey).(string)
-	})
+	}
 	return str
 }
 
@@ -34,7 +33,7 @@ func (cc *captcha) Match(c *c.Context, ignoreCase bool) bool {
 
 //clear captcha
 func (cc *captcha) Clear(c *c.Context) {
-	calls.NNil(middleware.GetSession(c), func() {
+	if middleware.GetSession(c) != nil {
 		middleware.GetSession(c).Del(cc.sessionKey)
-	})
+	}
 }
