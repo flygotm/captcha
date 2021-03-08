@@ -1,9 +1,9 @@
-github.com/billcoding/flygo v0.0.0-20210307113911-f6a45376fbdf h1:IUDaIWknZ0j890pmMdHKxwYyUQ6lP0Us2nbQppIwvTU=
-github.com/billcoding/flygo v0.0.0-20210307113911-f6a45376fbdf/go.mod h1:PgWPxr34iHzadc3Kdehz2M6xmvFmztWjIuyb2VeLrao=
+github.com/billcoding/flygo v0.0.0-20210308112718-552594bb16c9 h1:LefrSEGTYEMlshyeVDSh9uOXwrPbvl95F9Dwf39xk84=
+github.com/billcoding/flygo v0.0.0-20210308112718-552594bb16c9/go.mod h1:aPF3eflbQyyN/BLTZ0y2Jo6IV1k88x6oZkkoOZH98ok=
 github.com/billcoding/tagparse v0.0.0-20210123031055-de0378380167 h1:o2G+V1dHHRVKkZpBYP6VWl9SWhCDM0dYlG55Jt6BaZg=
 github.com/billcoding/tagparse v0.0.0-20210123031055-de0378380167/go.mod h1:1sC6gaeSl3GR7cbQ7JbwJlm5bmL87OO/c6zp2oGapjE=
-github.com/billcoding/validator v0.0.0-20210123032557-3769fc73f900 h1:WnkQi47+n2nP5a0UIVtsEu5Tcn9S1lCOgr2CbjEIviw=
-github.com/billcoding/validator v0.0.0-20210123032557-3769fc73f900/go.mod h1:vq+K/qb74JzDp34wrnIuV/jZn726/+TPAsWdYs+O+VE=
+github.com/billcoding/validator v0.0.0-20210308111115-7e4f0f7bf41c h1:B0xVWPMmgXFVBFj+QgFUIuv/IvjR0YO1H/LfraRQQLw=
+github.com/billcoding/validator v0.0.0-20210308111115-7e4f0f7bf41c/go.mod h1:vq+K/qb74JzDp34wrnIuV/jZn726/+TPAsWdYs+O+VE=
 github.com/fogleman/gg v1.3.0 h1:/7zJX8F6AaYQc57WQCyN9cAIz+4bCJGO9B+dyW29am8=
 github.com/fogleman/gg v1.3.0/go.mod h1:R/bRT+9gY/C5z7JzPU0zXsXHKM4/ayA+zqcVNZzPa1k=
 github.com/fsnotify/fsnotify v1.4.7/go.mod h1:jwhsz4b93w/PPRr/qN1Yymfu8t87LnFCMoQvtojpjFo=
